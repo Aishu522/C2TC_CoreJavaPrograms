@@ -1,5 +1,6 @@
 package com.tnsif.multipeinhertance;
 //create two interface
+
 interface Aparna{
 	void show();
 }
