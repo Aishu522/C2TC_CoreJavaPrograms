@@ -3,9 +3,11 @@ package ExceptionHandling;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MultipleCatchDemo {
+public class MultipleCatchExample{
 	public static void main(String[] args) {
+
 		System.out.println("I am in main method");
+
 		int numberOne, numberTwo, numberThree;
 		Scanner sc = new Scanner(System.in);
 
@@ -13,22 +15,27 @@ public class MultipleCatchDemo {
 			try {
 				System.out.println("Enter First number: ");
 				numberOne = sc.nextInt();
+
 				System.out.println("Enter Second number: ");
 				numberTwo = sc.nextInt();
+
 				numberThree = numberOne / numberTwo;
 				System.out.println("Division is " + numberThree);
-				//break;
+
+				break; 
 			} catch (InputMismatchException e) {
-				// e.printStackTrace();
 				System.out.println("Invalid input. Please enter integers only.");
-				sc.nextLine();
+				sc.nextLine(); // clear wrong input
+
 			} catch (ArithmeticException e) {
-				System.out.println("Exception caught: " + e.getMessage());
-				// break;
+				System.out.println("Cannot divide by zero.");
+
 			} catch (Exception e) {
 				System.out.println("Exception caught: " + e.getMessage());
-				// break;
 			}
 		}
+
+		sc.close(); 
+		
 	}
 }

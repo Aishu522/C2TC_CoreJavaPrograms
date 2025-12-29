@@ -1,4 +1,4 @@
-package com.tnsif.nonaccessmodifiers;
+package com.tnsif.opps.abstraction;
 
 abstract class Shape{
 	abstract void draw();
